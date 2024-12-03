@@ -63,3 +63,24 @@ func solveDay1(left, right []int) int {
 
 	return result
 }
+
+func countOccurrences(s int, i []int) int {
+	count := 0
+
+	for _, v := range i {
+		if v == s {
+			count++
+		}
+	}
+
+	return count
+}
+
+func similarityScore(left, right []int) int {
+	score := 0
+	for _, val := range left {
+		occurances := countOccurrences(val, right)
+		score += val * occurances
+	}
+	return score
+}
