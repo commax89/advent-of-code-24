@@ -1,5 +1,12 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
-	solveDay1([]int{3, 4, 2, 1, 3, 3}, []int{4, 3, 5, 4, 9, 3})
+	left, right := readDay1File(false)
+
+	dayOneResult := solveDay1(left, right)
+	fmt.Printf("the day one result is: %d \n", dayOneResult)
 }
